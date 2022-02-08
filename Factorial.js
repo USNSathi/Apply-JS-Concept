@@ -27,15 +27,26 @@
 
 // While loop
 
-function getFactorial(number) {
-    let factorial = 1;
-    let i = 1;
-    while (i <= number) {
-        factorial = factorial * i;
-        i++;
+// function getFactorial(number) {
+//     let factorial = 1;
+//     let i = 1;
+//     while (i <= number) {
+//         factorial = factorial * i;
+//         i++;
+//     }
+//     return factorial;
+// }
+
+// const myFactorial = getFactorial(6);
+// console.log(myFactorial);
+
+// With Recursion
+
+function factorial(i) {
+    if (i == 1) {
+        return 1;
     }
-    return factorial;
+    return i * factorial(--i);
 }
 
-const myFactorial = getFactorial(6);
-console.log(myFactorial);
+console.log(factorial(4));
